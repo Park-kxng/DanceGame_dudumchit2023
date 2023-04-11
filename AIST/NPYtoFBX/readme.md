@@ -29,7 +29,7 @@
 * 24개의 각 조인트마다 3X3 로드리게스 회전 행렬
 * 글로벌 위치 좌표 (x,y,z)
 * 6개의 패딩 값
-* 24 X 9 + 3 + 6 = 225 차원의 넘파이 배열
+* 24 X 9 + 3 + 6 = 225 차원의 넘파이 배열  
 ![](Imgs/npy_structure.jpg)
 * `Dict["smpl_poses"]` : A `(N, 72)` ndarray, where `N` is the frame number.
     * Joint order: 
