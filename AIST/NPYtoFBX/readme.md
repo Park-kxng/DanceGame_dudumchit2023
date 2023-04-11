@@ -1,11 +1,14 @@
 # SMPL to FBX
 ![](Imgs/teaser.gif)
-
-I can convert motions in SMPL format into FBX files.
-
+**춤 실행 결과 .npy 파일을 본 코드를 통해 .fbx 파일로 변환한 결과는 두둠칫 드라이브 data/NPYtoFBX/outputs 에 올려두었습니다**
+## 참고 링크
+1. https://github.com/softcat477/SMPL-to-FBX
+2. https://github.com/google-research/mint/issues/39#issuecomment-1173681795
+**본 readme는 1번 GitHub readme에서 일부 수정하였습니다**
+**2번을 참고하여 SmplObject.py 와 PathFilter.py 코드를 일부 수정하였습니다**
 ## Steps
 1. Install [Python FBX](https://download.autodesk.com/us/fbx/20112/fbx_sdk_help/index.html?url=WS1a9193826455f5ff453265c9125faa23bbb5fe8.htm,topicNumber=d0e8312).
-1. Download the [SMPL fbx model](https://smpl.is.tue.mpg.de) for unity. Keep the male model `SMPL_m_unityDoubleBlends_lbs_10_scale5_207_v1.0.0.fbx`.
+1. Download the [SMPL fbx model](https://smpl.is.tue.mpg.de) for unity. Keep the male model `SMPL_m_unityDoubleBlends_lbs_10_scale5_207_v1.0.0.fbx`. **두둠칫 드라이브 data/fbx/ 에서 다운받을 수 있습니다**
 2. `pip install -r requirements.txt`
 3. Here's the file structure:
     ```
@@ -13,15 +16,20 @@ I can convert motions in SMPL format into FBX files.
     |--Convert.py
     |--SmplObject.py
     |--FbxReadWriter.py
-    |--<pkl_path>/
-    |  |--*.pkl
+    |--PathFilter.py
     |--<fbx_path>/
     |  |--SMPL_m_unityDoubleBlends_lbs_10_scale5_207_v1.0.0.fbx
+    |--<npy_path>/
+    |  |--*.npy
     |--<output_path>/
     ```
 4. `python3 Convert.py --input_pkl_base <pkl_path> --fbx_source_path <fbx_path>/SMPL_m_unityDoubleBlends_lbs_10_scale5_207_v1.0.0.fbx --output_base <output_path>` to start converting.
-## What's inside the pkl file?
-A pkl file contains a dictionary with two keys: `smpl_poses` and `smpl_trans`. There's a sample pkl file in `./Pkls/sample.pkl`.
+## npy 파일 구조
+* 24개의 각 조인트마다 3X3 로드리게스 회전 행렬
+* 글로벌 위치 좌표 (x,y,z)
+* 6개의 패딩 값
+* 24 X 9 + 3 + 6 = 225 차원의 넘파이 배열
+![](Imgs/npy_structure.jpg)
 * `Dict["smpl_poses"]` : A `(N, 72)` ndarray, where `N` is the frame number.
     * Joint order: 
         ```
