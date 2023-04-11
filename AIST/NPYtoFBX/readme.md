@@ -4,8 +4,8 @@
 ## 참고 링크
 1. https://github.com/softcat477/SMPL-to-FBX
 2. https://github.com/google-research/mint/issues/39#issuecomment-1173681795  
-  **본 readme는 1번 GitHub readme에서 일부 수정하였습니다**  
-  **2번을 참고하여 SmplObject.py 와 PathFilter.py 코드를 일부 수정하였습니다**
+**본 readme는 1번 GitHub readme에서 일부 수정하였습니다**  
+**2번을 참고하여 SmplObject.py 와 PathFilter.py 코드를 일부 수정하였습니다**
 ## Steps
 1. Install [Python FBX](https://download.autodesk.com/us/fbx/20112/fbx_sdk_help/index.html?url=WS1a9193826455f5ff453265c9125faa23bbb5fe8.htm,topicNumber=d0e8312).
 1. Download the [SMPL fbx model](https://smpl.is.tue.mpg.de) for unity. Keep the male model `SMPL_m_unityDoubleBlends_lbs_10_scale5_207_v1.0.0.fbx`  
