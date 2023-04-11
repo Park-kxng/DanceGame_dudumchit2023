@@ -4,6 +4,7 @@
 ## 참고 링크
 1. https://github.com/softcat477/SMPL-to-FBX
 2. https://github.com/google-research/mint/issues/39#issuecomment-1173681795  
+
 **본 readme는 1번 GitHub readme에서 일부 수정하였습니다**  
 **2번을 참고하여 SmplObject.py 와 PathFilter.py 코드를 일부 수정하였습니다**
 ## Steps
