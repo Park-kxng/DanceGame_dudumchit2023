@@ -1,6 +1,6 @@
 # SMPL NPY to FBX
 ![](Imgs/teaser.gif)  
-**춤 실행 결과 .npy 파일을 본 코드를 통해 .fbx 파일로 변환한 결과는 두둠칫 드라이브 data/NPYtoFBX/outputs 에 올려두었습니다**
+**춤 실행 결과 .npy 파일을 본 코드를 통해 .fbx 파일로 변환한 결과는 두둠칫 드라이브 `data/NPYtoFBX/outputs` 에 올려두었습니다**
 ## 참고 링크
 1. https://github.com/softcat477/SMPL-to-FBX
 2. https://github.com/google-research/mint/issues/39#issuecomment-1173681795  
@@ -10,7 +10,7 @@
 ## Steps
 1. Install [Python FBX](https://download.autodesk.com/us/fbx/20112/fbx_sdk_help/index.html?url=WS1a9193826455f5ff453265c9125faa23bbb5fe8.htm,topicNumber=d0e8312).
 1. Download the [SMPL fbx model](https://smpl.is.tue.mpg.de) for unity. Keep the male model `SMPL_m_unityDoubleBlends_lbs_10_scale5_207_v1.0.0.fbx`  
-**두둠칫 드라이브 'data/NPYtoFBX/fbx/' 에서 다운받을 수 있습니다**.
+**두둠칫 드라이브 `data/NPYtoFBX/fbx/` 에서 다운받을 수 있습니다**.
 2. `pip install -r requirements.txt`
 3. Here's the file structure:
     ```
