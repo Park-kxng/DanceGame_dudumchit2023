@@ -53,15 +53,26 @@ while True:
         # Extract landmarks
         try:
             landmarks = results.pose_landmarks.landmark
-            landmarks = np.array([[landmark.x, landmark.y, landmark.z, landmark.visibility] for landmark in landmarks])
-            #print(landmarks)
+            #landmarks = np.array([[landmark.x, landmark.y, landmark.z, landmark.visibility] for landmark in landmarks])
+            #####print(landmarks)
             print("=======================")
             # landmarks 데이터 클라이언트에게 전송
-            data = landmarks.tobytes()
-            #data = pickle.dumps(landmarks)
-            client_socket.send(data)
-            print(landmarks)
-            print(data)
+            #data = landmarks.tobytes()
+            ####data = pickle.dumps(landmarks)
+            #client_socket.send(data)
+            #print(landmarks)
+            #print(data)
+
+            #########
+            landmarks_str = ""
+            for landmark in landmarks:
+                landmarks_str += str(landmark.x) + "," + str(landmark.y) + "," + str(landmark.z) +",";
+
+            client_socket.send(landmarks_str.encode())
+            print(landmarks_str)
+            print(landmarks_str.encode())
+            landmarks_str = ""
+            print(landmarks_str)
         except:
             pass
 
