@@ -38,6 +38,7 @@ while True:
             print("비디오 프레임 가져오지 못함")
             break
 
+
         # Convert BGR to RGB
         image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         image.flags.writeable = False
@@ -78,7 +79,9 @@ while True:
 
         # Show image
         cv2.imshow('Pose Estimation', image)
-
+        # Show image
+        #resized_image = cv2.resize(image, (int(image.shape[1] / 2), int(image.shape[0])))
+        #cv2.imshow('Pose Estimation', resized_image)
         # Exit when escape is pressed
         if cv2.waitKey(1) == 27:
             break
