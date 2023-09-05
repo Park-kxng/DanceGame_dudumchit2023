@@ -33,33 +33,34 @@ public class ChooseMusic : MonoBehaviour
         Debug.Log("이전 단계로 돌아갑니다 -> 1번 화면으로");
         SceneManager.LoadScene("1_MainMenu");
     }
-    public void CopyFile()
+
+    public void CopyFBX()
     {
+        // 로컬 저장소에 저장된 FBX파일을 유니티의 Assets/Resources 경로에 저장
+
         Debug.Log("fbx 파일 복사 및 실행");
         string sourcePath = @"C:/Users/parkg/Desktop/dudum_fbx/gBR_sBM_cAll_d04_mBR0_ch01_mJB5.npy.fbx"; // 복사할 로컬 파일 경로
         string destinationPath = "Assets/Resources/sample1.fbx"; // Assets 폴더 내의 목적지 경로
 
-        if (System.IO.File.Exists(sourcePath))
+        // 1) 이미 Assets 폴더에 FBX파일이 있는 경우
+        if (System.IO.File.Exists(destinationPath)) {
+
+            Debug.Log("이미 유니티에 fbx파일이 존재함 : Assets/Resources/sample1.fbx");
+        }
+        // 2) Assets 폴더 X, 로컬 저장소에 O
+        else if (System.IO.File.Exists(sourcePath))
         {
+            // 로컬 저장소에서 fbx파일을 복사해오는 코드
             System.IO.File.Copy(sourcePath, destinationPath, true);
             UnityEditor.AssetDatabase.Refresh(); // 에디터 스크립트에서 사용
-            Debug.Log("File copied to Assets folder.");
+            Debug.Log("FBX파일을 유니티에 복사 완료");
         }
+        // 3) Assets 폴더 X, 로컬 저장소에 X
         else
         {
-            Debug.LogError("Source file does not exist.");
+            Debug.LogError("원하는 파일이 로컬 경로에 존재하지 않음");
         }
         
-        GameObject fbxModelPrefab = Resources.Load<GameObject>(fbxFilePath);
-
-        if (fbxModelPrefab != null)
-        {
-            GameObject fbxModel = Instantiate(fbxModelPrefab);
-            fbxModel.transform.position = Vector3.zero; // 원하는 위치로 이동
-        }
-        else
-        {
-            Debug.LogError("FBX model not found in Resources folder.");
-        }
+       
     }
 }

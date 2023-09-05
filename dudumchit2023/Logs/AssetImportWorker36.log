@@ -15,7 +15,7 @@ C:/Users/parkg/Documents/github/3D_Pose_Estimation/dudumchit2023
 -logFile
 Logs/AssetImportWorker36.log
 -srvPort
-49811
+49942
 Successfully changed project path to: C:/Users/parkg/Documents/github/3D_Pose_Estimation/dudumchit2023
 C:/Users/parkg/Documents/github/3D_Pose_Estimation/dudumchit2023
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,13 +47,19 @@ C:/Users/parkg/Documents/github/3D_Pose_Estimation/dudumchit2023
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [30404] Host "[IP] 192.168.2.1 [Port] 0 [Flags] 2 [Guid] 1074832203 [EditorId] 1074832203 [Version] 1048832 [Id] WindowsEditor(7,Justpak) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [19868] Host "[IP] 192.168.2.1 [Port] 0 [Flags] 2 [Guid] 3227834579 [EditorId] 3227834579 [Version] 1048832 [Id] WindowsEditor(7,Justpak) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [30404] Host "[IP] 192.168.2.1 [Port] 0 [Flags] 2 [Guid] 1074832203 [EditorId] 1074832203 [Version] 1048832 [Id] WindowsEditor(7,Justpak) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [19868] Host "[IP] 192.168.2.1 [Port] 0 [Flags] 2 [Guid] 3227834579 [EditorId] 3227834579 [Version] 1048832 [Id] WindowsEditor(7,Justpak) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 1072.49 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 2017.51 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.24f1 (cf10dcf7010d)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.24f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path C:/Users/parkg/Documents/github/3D_Pose_Estimation/dudumchit2023/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) Iris(R) Plus Graphics (ID=0x8a52)
+    Vendor:   Intel
+    VRAM:     8072 MB
+    Driver:   27.20.100.8853
